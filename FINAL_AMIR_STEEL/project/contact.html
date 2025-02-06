@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Steel Solutions</title>
+    <link rel="stylesheet" href="/project/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/project/images/AMIR-STEEL-1-1.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/project/product.html">Products</a></li>
+
+            <li><a href="about.html">About Us</a></li>
+            
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>Get in Touch with Our Team</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p> Amir steel, gala no.2, Sr no.97/12 Swastik industrial estate,Golani waliv,</p>
+                    <p> Vasai east, Palghar - 401208</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>+91 8421664566</p>
+                    
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>Amirsteel4381@gmail.com</p>
+
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday</p>
+                    <p>9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15052.633672606637!2d72.84143525427903!3d19.405560046927484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a8d4c8efb4bd%3A0xe55a7326194e5152!2sSWASTIK%20INDUSTRIES!5e0!3m2!1sen!2sin!4v1738754192788!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="/project/images/footer-logo.png" alt="Logo" />
+                <p>Your trusted partner in steel manufacturing and distribution</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/project/index.html">Home</a></li>
+                    <li><a href="/project/product.html">Products</a></li>
+                    <li><a href="/project/about.html">About Us</a></li>
+                    <li><a href="/project/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +91 8421664566</p>
+                <p><i class="fas fa-envelope"></i> Amirsteel4381@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Amir steel, gala no.2, Sr no.97/12 Swastik industrial estate, Golani waliv, Vasai east, Palghar - 401208</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Amir Steel. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/project/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
