@@ -1,0 +1,75 @@
+/* About Page Styles */
+.about-container {
+    margin-top: 30px;
+    padding: 80px 5% 40px;
+}
+h1{
+    text-align: center;
+}
+
+.about-header {
+    text-align: left;
+    margin-bottom: 40px;
+    margin-left: 235px;
+}
+
+.about-header h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-header p {
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: black;
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #000000;
+    line-height: 1.8;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-card i {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #000000;
+}
