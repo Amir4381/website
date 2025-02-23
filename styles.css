@@ -489,20 +489,21 @@ footer {
 
 .factory-banner {
     display: flex;
-    flex-wrap: wrap;  /* Allows elements to stack on mobile */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Adds spacing between elements */
+    gap: 20px;
 }
 
 .factory-banner img {
-    max-width: 100%; /* Ensures image scales properly */
+    max-width: 100%;
     height: auto;
 }
 
+/* Make video full width on desktop, responsive on mobile */
 .video-container {
     width: 100%;
-    max-width: 560px; /* Keeps video from getting too large */
+    max-width: 1200px; /* Set a max-width for large screens */
     position: relative;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
@@ -513,4 +514,12 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 560px; /* Keep it readable on mobile */
+        padding-top: 56.25%;
+    }
 }
