@@ -580,28 +580,62 @@ footer {
 .product-button:hover {
     background-color: #a0a0a0;
 }
-/* Position the button lower */
+/* Fixes Contact Button Position */
 .first-slide {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    overflow: hidden;
 }
 
+/* Contact Button */
 .contact-btn {
     position: absolute;
-    bottom: 5%; /* Moves the button lower */
+    bottom: 8%;
     left: 50%;
     transform: translateX(-50%);
-    background: #000000; /* WhatsApp green */
+    background: #000000;
     color: white;
-    padding: 12px 25px;
-    font-size: 18px;
+    padding: 10px 22px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
     transition: 0.3s ease-in-out;
+    white-space: nowrap;
+    max-width: 85%;
+    text-align: center;
 }
 
+/* Hover effect */
 .contact-btn:hover {
     background: #b0b0b0;
     transform: translateX(-50%) scale(1.1);
 }
 
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .contact-btn {
+        font-size: 14px;
+        padding: 8px 18px;
+        bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-btn {
+        font-size: 12px;
+        padding: 6px 15px;
+        bottom: 12%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contact-btn {
+        font-size: 10px;
+        padding: 5px 12px;
+        bottom: 14%;
+    }
+}
