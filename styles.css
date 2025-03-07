@@ -581,6 +581,23 @@ footer {
     background-color: #a0a0a0;
 }
 
+/* Banner should take up enough height */
+.first-slide {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Ensure image inside the banner fits properly */
+.first-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures it covers the space properly */
+}
 
 /* Contact Button */
 .contact-btn {
@@ -590,7 +607,7 @@ footer {
     transform: translateX(-50%);
     background: #000000;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
@@ -598,7 +615,6 @@ footer {
     transition: 0.3s ease-in-out;
     white-space: nowrap;
     text-align: center;
-    max-width: 80%;
 }
 
 /* Hover effect */
@@ -607,37 +623,38 @@ footer {
     transform: translateX(-50%) scale(1.1);
 }
 
-/* Responsive Fixes */
+/* 📌 Fix for 1100px */
 @media screen and (max-width: 1100px) {
     .contact-btn {
         font-size: 14px;
-        padding: 8px 16px;
+        padding: 10px 20px;
         bottom: 8%;
     }
 }
 
+/* 📌 Increase Banner Height on Mobile */
 @media screen and (max-width: 600px) {
+    .first-slide {
+        height: 70vh; /* Makes the banner taller */
+    }
+
     .contact-btn {
         font-size: 12px;
-        padding: 6px 14px;
-        bottom: 10%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .contact-btn {
-        font-size: 10px;
-        padding: 5px 12px;
+        padding: 8px 16px;
         bottom: 12%;
     }
 }
 
-/* Ensure Parent Banner Adapts */
-.first-slide {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-    overflow: hidden;
+/* 📌 Further increase height for very small devices */
+@media screen and (max-width: 400px) {
+    .first-slide {
+        height: 80vh;
+    }
+
+    .contact-btn {
+        font-size: 10px;
+        padding: 6px 12px;
+        bottom: 15%;
+    }
 }
+
