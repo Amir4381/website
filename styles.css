@@ -580,3 +580,28 @@ footer {
 .product-button:hover {
     background-color: #a0a0a0;
 }
+/* Position the button lower */
+.first-slide {
+    position: relative;
+}
+
+.contact-btn {
+    position: absolute;
+    bottom: 5%; /* Moves the button lower */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000; /* WhatsApp green */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: #b0b0b0;
+    transform: translateX(-50%) scale(1.1);
+}
+
