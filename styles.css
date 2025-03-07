@@ -1,0 +1,664 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background: #ffffff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 73px;
+}
+
+.logo {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex; /* Ensure menu is visible on desktop */
+    gap: 20px; /* Space between menu items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent; /* No background for desktop */
+    position: static; /* Normal flow positioning */
+    flex-direction: row; /* Horizontal menu for desktop */
+}
+
+
+
+.nav-links li {
+    display: inline-block;
+}
+.nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #C7C8C8;
+    border-radius: 4px;
+}
+
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        background-color: white; /* White background for dropdown */
+        position: absolute; /* Position as a dropdown */
+        top: 60px; /* Adjust based on navbar height */
+        right: 0; /* Align to the right */
+        width: 100%; /* Full-width menu for mobile */
+        padding: 10px 0; /* Padding for dropdown items */
+        z-index: 10; /* Ensure dropdown is above other elements */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-links li {
+        text-align: center; /* Center align menu items */
+        padding: 10px 0;
+        border-bottom: 1px solid #eaeaea; /* Divider between items */
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none; /* No divider for the last item */
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    margin: 2px;
+    transition: 0.3s;
+}
+/* Slider Styles */
+.slider {
+    margin-top: 80px; /* Space from the top */
+    position: relative;
+    width: 100%; /* Full screen width */
+    height: 90vh; /* Slightly smaller than the full viewport height */
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center images vertically */
+    background: #f4f4f4; /* Optional background to fill gaps */
+}
+
+/* Slides Container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide Images */
+.slide img {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: contain; /* Ensure the entire image is visible */
+    background-color: white; /* Optional: to highlight the image area */
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.slider-btn.prev {
+    left: 15px;
+}
+
+.slider-btn.next {
+    right: 15px;
+}
+
+
+/* Products Section */
+.products {
+    padding: 4rem 5%;
+}
+
+.products h1 {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.product-category {
+    margin-bottom: 3rem;
+}
+
+.product-category h3 {
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.product-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.product-card h4 {
+    padding: 1rem;
+    color: #000000;
+}
+
+.product-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #128c7e;
+}
+
+.factory {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.factory-banner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.factory h2 {
+    text-align: center;
+    padding: 1rem;
+    color: #000000;
+}
+/* Features Section */
+.features {
+    padding: 4rem 5%;
+    background: #f5f5f5;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: white;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    height: 300px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section i {
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-content .footer-section img{
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    
+    .hamburger {
+        display: flex;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .slide img {
+        height: 300px;
+    }
+}
+.video-container {
+    position: relative;
+    width: 98%; /* Almost full width for larger screens */
+    max-width: 1600px; /* Significantly increased size for large displays */
+    aspect-ratio: 16 / 9; /* Maintains 16:9 aspect ratio */
+    margin: 50px auto; /* Generous spacing around the container */
+    border: 8px solid #000000; /* Bold border for visual prominence */
+    border-radius: 25px; /* Smooth, rounded corners */
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); /* Strong shadow for a premium feel */
+    background-color: #000; /* Clean look while loading */
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-container {
+    width: 100vw; /* Full viewport width */
+     height: 80vh; 
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack the product cards vertically */
+        gap: 1.5rem;
+    }
+
+    .product-card img {
+        width: 100%; /* Ensure images take full width on mobile */
+        height: auto; /* Adjust height accordingly */
+    }
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: white;
+    padding: 3rem 5% 2rem; /* Add more bottom padding */
+    position: relative;
+    z-index: 100; /* Ensure it's placed on top of other elements */
+    clear: both; /* Clear any floated content */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    height: auto; /* Allow height to adjust based on content */
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section i {
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content .footer-section img {
+    color: white;
+}
+
+/* Mobile Footer Fix */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 5%; /* Ensure padding for small screens */
+    }
+
+    .footer-content {
+        display: block; /* Stack sections vertically */
+        padding-bottom: 20px; /* Additional padding to keep content from touching the bottom */
+    }
+
+    .footer-section {
+        margin-bottom: 2rem; /* Ensure sections have space in between */
+    }
+
+    .footer-bottom {
+        padding: 1rem 0;
+    }
+}
+
+.factory {
+    text-align: center;
+    padding: 20px;
+}
+
+.factory-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.factory-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make video full width on desktop, responsive on mobile */
+.video-container {
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for large screens */
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 560px; /* Keep it readable on mobile */
+        padding-top: 56.25%;
+    }
+}
+
+
+.product-card {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Ensures enough space for text */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    flex-grow: 1; /* Ensures the paragraph takes available space */
+    padding: 0 10px;
+}
+
+.product-button {
+    background-color: #b0b0b0; /* Gray background */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px; /* Pill shape */
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px; /* Provides space above the button */
+    width: 80%;
+    align-self: center;
+}
+
+.product-button:hover {
+    background-color: #a0a0a0;
+}
+/* Ensuring the button stays inside the banner */
+.first-slide {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Contact Button */
+.contact-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Hover effect */
+.contact-btn:hover {
+    background: #b0b0b0;
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* 📌 Fix for 1100px */
+@media screen and (max-width: 1100px) {
+    .contact-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        bottom: 8%;
+    }
+}
+
+/* 📌 Fix for Mobile (600px and smaller) */
+@media screen and (max-width: 600px) {
+    .contact-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+        bottom: 10%;
+    }
+}
+
+/* 📌 Fix for Very Small Devices (below 400px) */
+@media screen and (max-width: 400px) {
+    .contact-btn {
+        font-size: 10px;
+        padding: 6px 12px;
+        bottom: 12%;
+    }
+}
+.banner-container {
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.contact-button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
