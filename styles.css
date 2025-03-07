@@ -581,7 +581,7 @@ footer {
     background-color: #a0a0a0;
 }
 
-/* Banner should take up enough height */
+/* Ensuring the button stays inside the banner */
 .first-slide {
     position: relative;
     width: 100%;
@@ -590,13 +590,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-}
-
-/* Ensure image inside the banner fits properly */
-.first-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures it covers the space properly */
 }
 
 /* Contact Button */
@@ -632,29 +625,21 @@ footer {
     }
 }
 
-/* 📌 Increase Banner Height on Mobile */
+/* 📌 Fix for Mobile (600px and smaller) */
 @media screen and (max-width: 600px) {
-    .first-slide {
-        height: 70vh; /* Makes the banner taller */
-    }
-
     .contact-btn {
         font-size: 12px;
         padding: 8px 16px;
-        bottom: 12%;
+        bottom: 10%;
     }
 }
 
-/* 📌 Further increase height for very small devices */
+/* 📌 Fix for Very Small Devices (below 400px) */
 @media screen and (max-width: 400px) {
-    .first-slide {
-        height: 80vh;
-    }
-
     .contact-btn {
         font-size: 10px;
         padding: 6px 12px;
-        bottom: 15%;
+        bottom: 12%;
     }
 }
 
