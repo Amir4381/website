@@ -1,0 +1,201 @@
+/* Contact Page Styles */
+.contact-container {
+    padding: 80px 5% 40px;
+    margin-top: 30px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h1 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #252526;
+}
+
+.map-container {
+    margin-top: 40px;
+}
+
+.map-container h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ensure the navbar has proper positioning */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #ffffff; /* Adjust based on your theme */
+    position: relative;
+}
+
+/* Style for the logo */
+.logo img {
+    height: 50px; /* Adjust size if needed */
+}
+
+/* Desktop navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.hamburger span {
+    background-color: #000;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
